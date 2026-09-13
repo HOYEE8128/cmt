@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>댓글</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+<meta name="theme-color" content="#f5f6f8">
+<style>
+  body { margin: 0; font-family: -apple-system, 'Malgun Gothic', sans-serif; background: #f5f6f8;
+         color: #1c1c1e; display: flex; align-items: center; justify-content: center; height: 100vh; }
+  a { color: #2563eb; font-size: 15px; }
+</style>
+</head>
+<body>
+<!-- 입구일 뿐이다. 실제 댓글 페이지는 PC 조슈아 웹앱에 있다. 여기서는 넘겨주기만 한다. -->
+<div style="text-align:center;line-height:1.8;padding:0 24px">
+  <p id="msg">크롬 메뉴(⋮)에서 <b>앱 설치</b>를 누르세요.</p>
+  <a id="go" href="https://hoyee.tail799edd.ts.net/comments.html">댓글 페이지 열기</a>
+</div>
+<script>
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js');
+  // 브라우저에서 열면 설치할 수 있게 머물고, 홈 화면 앱으로 열었을 때만 넘긴다.
+  if (matchMedia('(display-mode: standalone)').matches || navigator.standalone) {
+    document.getElementById('msg').textContent = '댓글 페이지로 이동 중…';
+    location.replace('https://hoyee.tail799edd.ts.net/comments.html');
+  }
+</script>
+</body>
+</html>
