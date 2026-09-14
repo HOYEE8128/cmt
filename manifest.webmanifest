@@ -1,7 +1,7 @@
 {
   "id": "./",
-  "name": "블로그 댓글",
-  "short_name": "댓글",
+  "name": "댓답글",
+  "short_name": "댓답글",
   "lang": "ko",
   "start_url": "./index.html",
   "scope": "./",
