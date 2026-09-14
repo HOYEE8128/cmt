@@ -1,7 +1,7 @@
 {
   "id": "./",
-  "name": "댓답글",
-  "short_name": "댓답글",
+  "name": "소통",
+  "short_name": "소통",
   "lang": "ko",
   "start_url": "./index.html",
   "scope": "./",
